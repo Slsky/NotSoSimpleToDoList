@@ -1,0 +1,88 @@
+body {
+    background-color: #fff;
+    color: black;
+}
+
+.field {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.main {
+    min-width: 530px;
+    max-width: 550px;
+    margin: auto;
+    background-color: whitesmoke;
+    box-shadow: 0px 2px 4px #afafaf;
+    padding: 10px;
+}
+
+.paper-stile {
+    box-shadow:
+        /* Тень верхнего слоя */
+        0 1px 1px rgba(0, 0, 0, 0.15),
+        /* Второй слой */
+        0 10px 0 -5px #eee,
+        /* Тень второго слоя */
+        0 10px 1px -4px rgba(0, 0, 0, 0.15),
+        /* Третий слой */
+        0 20px 0 -10px #eee,
+        /* Тень третьего слоя */
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+    /* Отступ для демо */
+    padding: 30px;
+}
+
+.item {
+    list-style-type: none;
+    margin: 10px;
+    margin-left: -35px;
+    padding: 5px;
+
+    background-color: white;
+    border: 1px solid #fafafa;
+    box-shadow: 0px 1px 2px #afafaf;
+
+    border: 0px none white;
+    border-radius: 5px;
+}
+
+.to-end {
+    float: right;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.inline-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    margin: 10px;
+    padding: 5px;
+
+    margin-left: 5px;
+    margin-right: 15px;
+    width: 500px;
+}
+
+.input {
+    width: 300px;
+    border: 0px none white;
+    border-radius: 5px;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.submit {
+    border: 0px none none;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.blue {
+    background-color: lightskyblue;
+}
