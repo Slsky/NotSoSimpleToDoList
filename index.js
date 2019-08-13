@@ -1,9 +1,9 @@
 function list(e) {
 
     let li = listElement({
-        textElement: textElement(),
-        inputElement: inputElement(),
-        buttonElement: buttonElement()
+        textElement: textElement,
+        inputElement: inputElement,
+        buttonElement: buttonElement
     });
 
     root.insertAdjacentHTML('beforeend', li);
@@ -12,9 +12,9 @@ function list(e) {
 function listElement(obj) {
     return `
         <li class="item">
-            ${obj.inputElement}
-            ${obj.textElement}
-            ${obj.buttonElement}
+            ${obj.inputElement()}
+            ${obj.textElement()}
+            ${obj.buttonElement()}
         </li>`;
 }
 
@@ -34,30 +34,34 @@ function textElement() {
 }
 
 function buttonElement() {
-    return `<button class="to-end del" onclick="remove(this)">del</button>`
+    return `<button class="to-end btn-del" onclick="remove(this)">X</button>`
 }
 
 function chacked(e) {
-    e.nextElementSibling.classList.toggle("crossed");
+    console.log('e.nextElementSibling.classList', e.nextElementSibling.classList)
     e.parentNode.classList.toggle("blue");
+    console.log('e.ne', e.nextElementSibling)
+    // e.nextElementSibling.classList.toggle("");
+    e.nextElementSibling.classList.toggle("crossed");
 }
 
 function add(e) {
     list(e);
+    amountCards(len++);
     e.preventDefault();
-};
+}
 
 function remove(e) {
+    amountCards(len--);
     e.parentNode.remove();
 }
 
 function amountCards(e) {
-    let len = document.querySelectorAll("li").length;
     amount.innerText = `Cards: ${len}`;
 }
-
-setInterval(amountCards, 1000)
 
 let form = document.getElementById('submit');
 form.addEventListener("submit", add);
 
+let len = document.querySelectorAll("li").length;
+amountCards(len);

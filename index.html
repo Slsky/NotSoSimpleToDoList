@@ -11,8 +11,8 @@
     <div class="main field paper-stile">
 
         <form class="inline-form space-between" action="" method="get" id="submit">
-            <input class="input" type="text" id="input" placeholder="Купить молоко например..." required>
-            <input class=" knopka" type="submit" value="Добавить...">
+            <input class="input" type="text" id="input" placeholder="Купить молоко, например..." required>
+            <input class="btn-submit" type="submit" value="Добавить">
         </form>
 
         <ul id="root">
@@ -20,30 +20,23 @@
             <li class="item">
                 <input type="checkbox" onchange="chacked(this)">
                 <span class="text">Item 1</span>
-                <button class="to-end del" onclick="remove(this)">del</button>
+                <button class="to-end btn-del" onclick="remove(this)">X</button>
             </li>
             <li class="item">
                 <input type="checkbox" onchange="chacked(this)">
                 <span class="text">Item 2</span>
-                <button class="to-end del" onclick="remove(this)">del</button>
+                <button class="to-end btn-del" onclick="remove(this)">X</button>
             </li>
             <li class="item">
                 <input type="checkbox" onchange="chacked(this)">
                 <span class="text">Item 3</span>
-                <button class="to-end del" onclick="remove(this)">del</button>
+                <button class="to-end btn-del" onclick="remove(this)">X</button>
             </li>
 
         </ul>
-        <div id="amount"></div>
+        <div class="btn-disabled" id="amount"></div>
     </div>
-    <!-- <ul class="box to-start">
-        <li class="card">t</li>
-        <li class="card">y</li>
-        <li class="card">b</li>
-        <li class="card">t</li>
-        <li class="card">y</li>
-        <li class="card to-end">b</li>
-    </ul> -->
+
     <script src="index.js"></script>
 </body>
 
