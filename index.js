@@ -38,10 +38,7 @@ function buttonElement() {
 }
 
 function chacked(e) {
-    console.log('e.nextElementSibling.classList', e.nextElementSibling.classList)
     e.parentNode.classList.toggle("blue");
-    console.log('e.ne', e.nextElementSibling)
-    // e.nextElementSibling.classList.toggle("");
     e.nextElementSibling.classList.toggle("crossed");
 }
 
